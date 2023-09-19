@@ -2,9 +2,13 @@ import { messages } from "../messageData"
 
 export function Numbers ({currentStep}) {
 
+    //the current step will always be "active"
     const generateSteps = () => {
         return messages.map( (_, idx) => {
-            return <div>{idx+1}</div>
+            const classType = (idx === currentStep? "active":"")
+            return ( <div className={classType}>
+                        {idx+1}
+                     </div> )           
         })
     }
 
