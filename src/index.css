@@ -24,6 +24,7 @@ body {
   justify-content: space-between;
 }
 
+/* each div after number class */
 .numbers > div {
   height: 40px;
   aspect-ratio: 1;
