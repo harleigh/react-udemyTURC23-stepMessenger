@@ -6,15 +6,26 @@ import { Navigation } from "./Navigation";
 
 export default function  StepApp() {
     const [currentStep, setCurrentStep] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
 
+    const toggleVisibility = () => {
+      setIsVisible( curVisibility => !curVisibility)
+    }
 
-    return (
-        <>
+    const displayApp = () => {
+      return (
         <div className="stepsApp">
             <Numbers currentStep={currentStep}/>
             <DisplayMessage currentStep={currentStep}/>
             <Navigation setCurrentStep={setCurrentStep}/>
         </div>
+      )
+    }
+
+    return (
+        <>
+        <button className = "close" onClick={toggleVisibility}>&times;</button>
+        {isVisible && displayApp()}
         </>
     )
 }
