@@ -87,7 +87,8 @@ h3 {
 
 .close {
   position: relative;
-  top: 16px;
+  top: 90px;
+  left:1000px;
   border: none;
   background: none;
   cursor: pointer;
